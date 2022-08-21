@@ -33,7 +33,6 @@ Let's present here a couple of code snippets on how to solve a couple of questio
     - [In practice](#in-practice)
     - [Hierarchical Transformers](#hierarchical-transformers)
 
-
 ## Understanding the dimension conventions
 
 Let's start from a classical overview of the Transformer architecture (illustration from Lin et al,, "A Survey of Transformers")
@@ -393,7 +392,7 @@ Note that you cannot change the attention mechanism, so this example will use th
 
 It’s worth noting that **xFormer’s blocks expect tensors to be batch first, while PyTorch’s transformers uses a sequence first convention. Don’t forget to permute if you use xFormers’s blocks as drop-in replacements.**
 
-Similarly, the attention masks conventions are different: in PyTorch, the mask is *True* when an element should *not* be attended to, whereas in xFormer it’s the opposite. Don’t forget to negate your attention masks to use xFormers’ blocks as drop-in replacements.
+Similarly, the attention masks conventions are different: in PyTorch, the mask is _True_ when an element should _not_ be attended to, whereas in xFormer it’s the opposite. Don’t forget to negate your attention masks to use xFormers’ blocks as drop-in replacements.
 
 #### Block factory
 
@@ -420,7 +419,7 @@ encoder_config = {
     "dim_model": EMB,
     "residual_norm_style": "pre",  # Optional, pre/post
     "position_encoding_config": {
-        "name": "vocab",  # whatever position encodinhg makes sense
+        "name": "vocab",  # whatever position encodings makes sense
         "seq_len": SEQ,
         "vocab_size": VOCAB,
     },
@@ -455,7 +454,7 @@ print(y)
 
 ### Fair enough, now I just want to build models and be done with it
 
-This is the last example in the series, and goes one level up again, so that we consider building a whole Tranformer/xFormer model. Please note that this is just an example, because building the whole model from explicit parts is always an option, from pure PyTorch building blocks or adding some xFormers primitives.
+This is the last example in the series, and goes one level up again, so that we consider building a whole Transformer/xFormer model. Please note that this is just an example, because building the whole model from explicit parts is always an option, from pure PyTorch building blocks or adding some xFormers primitives.
 
 #### PyTorch Transformer
 
@@ -470,7 +469,7 @@ Transformer(
     dim_feedforward=2048,
     dropout=0.1,
     activation='relu',
-    custom_encoder=None, # the xFormers exemple below defines that
+    custom_encoder=None, # the xFormers example below defines that
     custom_decoder=None, # Same
     layer_norm_eps=1e-05,
     batch_first=False,
@@ -504,7 +503,7 @@ my_config = [
         "dim_model": EMB,
         "residual_norm_style": "pre",  # Optional, pre/post
         "position_encoding_config": {
-            "name": "vocab",  # whatever position encodinhg makes sense
+            "name": "vocab",  # whatever position encoding makes sense
             "seq_len": 1024,
             "vocab_size": VOCAB,
         },
@@ -535,7 +534,7 @@ my_config = [
         "dim_model": EMB,
         "residual_norm_style": "pre",  # Optional, pre/post
         "position_encoding_config": {
-            "name": "vocab",  # whatever position encodinhg makes sense
+            "name": "vocab",  # whatever position encoding makes sense
             "seq_len": SEQ,
             "vocab_size": VOCAB,
         },
@@ -765,7 +764,6 @@ class xFormerStackConfig:
 [2]: Kitaev, N., Kaiser, Ł., & Levskaya, A. (2020). Reformer: The Efficient Transformer.
 
 [3]: Vaswani et al., Attention is all you need, 2017
-
 
 ### Hierarchical Transformers
 

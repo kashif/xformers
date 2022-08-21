@@ -1,4 +1,4 @@
-# base encoder settings that can be extended and overriden
+# base encoder settings that can be extended and overridden
 # we leave out the attention part for other config to override
 
 _target_: xformers.factory.block_factory.xFormerEncoderConfig

@@ -61,7 +61,7 @@ With this said, you can build an encoder directly as follows:
         "dim_model": EMB,
         "residual_norm_style": "pre",  # Optional, pre/post
         "position_encoding_config": {
-            "name": "vocab",  # whatever position encodinhg makes sense
+            "name": "vocab",  # whatever position encoding makes sense
             "seq_len": SEQ,
             "vocab_size": VOCAB,
         },
@@ -98,7 +98,7 @@ Building full models
 ====================
 
 
- Now let's build a full Tranformers/xFormer model. Please note that this is just an example, because building the whole model from explicit parts is always an option, from pure PyTorch building blocks or adding some xFormers primitives.
+ Now let's build a full Transformers/xFormer model. Please note that this is just an example, because building the whole model from explicit parts is always an option, from pure PyTorch building blocks or adding some xFormers primitives.
 
 PyTorch Transformer
 -------------------
@@ -117,7 +117,7 @@ Am implementation of a full Transformer is supported directly by PyTorch, see th
         dim_feedforward=2048,
         dropout=0.1,
         activation='relu',
-        custom_encoder=None, # the xFormers exemple below defines that
+        custom_encoder=None, # the xFormers example below defines that
         custom_decoder=None, # Same
         layer_norm_eps=1e-05,
         batch_first=False,
@@ -160,7 +160,7 @@ There's also an added flexibility with xFormers in that attention mechanisms can
             "dim_model": EMB,
             "residual_norm_style": "pre",  # Optional, pre/post
             "position_encoding_config": {
-                "name": "vocab",  # whatever position encodinhg makes sense
+                "name": "vocab",  # whatever position encoding makes sense
                 "seq_len": 1024,
                 "vocab_size": VOCAB,
             },
@@ -188,7 +188,7 @@ There's also an added flexibility with xFormers in that attention mechanisms can
             "dim_model": EMB,
             "residual_norm_style": "pre",  # Optional, pre/post
             "position_encoding_config": {
-                "name": "vocab",  # whatever position encodinhg makes sense
+                "name": "vocab",  # whatever position encoding makes sense
                 "seq_len": SEQ,
                 "vocab_size": VOCAB,
             },

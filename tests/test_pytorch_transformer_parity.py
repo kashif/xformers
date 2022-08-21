@@ -155,7 +155,7 @@ if _is_triton_available:
     @pytest.mark.skipif(
         not torch.cuda.is_available(), reason="This test requires a gpu"
     )
-    def test_pytorch_tranformer_parity(device=torch.device("cuda")):
+    def test_pytorch_transformer_parity(device=torch.device("cuda")):
         # Build both a xFormers and Pytorch model
         reset_seeds()
         model_xformers = xFormer.from_config(xFormerConfig(_test_config)).to(device)

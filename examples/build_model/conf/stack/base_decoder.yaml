@@ -1,4 +1,4 @@
-# base encoder settings that can be extended and overriden
+# base encoder settings that can be extended and overridden
 # we leave out the attention part for other config to override
 
 _target_: xformers.factory.block_factory.xFormerDecoderConfig
@@ -8,7 +8,7 @@ block_type: decoder
 dim_model: ${emb}
 residual_norm_style: pre  # Optional pre/post
 position_encoding_config:
-  name: vocab  # whatever position encodinhg makes sense
+  name: vocab  # whatever position encoding makes sense
   seq_len: ${seq}
   vocab_size: ${vocab}
   dropout: 0

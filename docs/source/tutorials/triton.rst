@@ -5,7 +5,7 @@ Triton_ is a language and compiler for parallel programming, currently applicabl
 It is compatible with PyTorch CUDA Tensors, and can be interfaced directly with pure python code.
 
 
-PyTorch provides many primitives capable of tranforming tensors, which correspond to operators in each of the supported backends.
+PyTorch provides many primitives capable of transforming tensors, which correspond to operators in each of the supported backends.
 There are limits to how many of them can be supported at any point in time, short of supporting a JIT toolchain,
 so some operations typical of the Transformer family are supported in PyTorch as a sequence of base operators.
 

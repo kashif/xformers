@@ -12,7 +12,7 @@ That's completely fine! There are two paths to do this:
 - Alternatively, a `build_attention` helper is provided, which takes a dict as an input.
     In that case, you defer a lot of the instantiation work to xFormers,
     which makes it a little more obscure although the parameters are hopefully straightforward.
-    This was initially built for internal use in xFormers, to make sure that we can programatically
+    This was initially built for internal use in xFormers, to make sure that we can programmatically
     build and test all possible combinations.
     In turn this should allow you to do sweeps or architecture search, given that the multihead attention definition
     becomes something like:
